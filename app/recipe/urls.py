@@ -9,6 +9,7 @@ from recipe import views
 # a lot of dynamic url's
 router = DefaultRouter()
 router.register('tags', views.TagViewSet)
+router.register('ingredients', views.IngredientViewSet)
 
 app_name = 'recipe'
 
