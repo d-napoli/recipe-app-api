@@ -10,4 +10,6 @@ before_script: pip install docker-compose
 # Every time that we upload changes
 # It will run those commands bellow
 script:
-  - docker-compose run app sh -c "python manage.py test && flake8"
+  - docker-compose run app sh -c "python manage.py wait_for_db &&
+                                  python manage.py test &&
+                                  flake8"
